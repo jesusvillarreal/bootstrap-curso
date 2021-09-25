@@ -71,7 +71,7 @@
     <!-- Cards -->
     <div class="container mt-4 text-center" id="skill">
       <div class="card d-inline-block mt-4" style="width: 18rem">
-        <img src="/images/lenguajes/css.png" class="card-img-top" alt="..." />
+        <img src="./images/lenguajes/css.png" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">CSS</h5>
           <p class="card-text">
@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="card d-inline-block mt-4" style="width: 18rem">
-        <img src="/images/lenguajes/html.png" class="card-img-top" alt="..." />
+        <img src="./images/lenguajes/html.png" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">HTML</h5>
           <p class="card-text">
@@ -98,7 +98,7 @@
         </div>
       </div>
       <div class="card d-inline-block mt-4" style="width: 18rem">
-        <img src="/images/lenguajes/js.png" class="card-img-top" alt="..." />
+        <img src="./images/lenguajes/js.png" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">JS</h5>
           <p class="card-text">
@@ -110,7 +110,7 @@
       </div>
       <div class="card d-inline-block mt-4" style="width: 18rem">
         <img
-          src="/images/lenguajes/nodejs2.png"
+          src="./images/lenguajes/nodejs2.png"
           class="card-img-top"
           alt="..."
         />
@@ -203,6 +203,96 @@
         fugiat nobis vel et itaque optio.
       </div>
     </div>
+    <!-- formulario -->
+    <div class="container">
+      <h1 class="mt-4">Formulario</h1>
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6">
+          <form class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label  class="form-label">Nombres completos</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escribe tu nombre" required>
+              <div class="invalid-feedback">
+                Falta nombre completo
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Correo Electronico</label>
+              <input type="email" class="form-control" id="exampleInputPassword1" required>
+              <div class="invalid-feedback">
+                Correo invalido
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Proyectos</label>
+              <select class="form-select" multiple aria-label="multiple select example" required>
+                <option >Programación</option>
+                <option value="1" selected>Marketing</option>
+                <option value="2">Diseño</option>
+                <option value="3">Gerencia</option>
+              </select>
+              <div class="invalid-feedback">
+                Falta proyecto
+              </div>
+            </div>
+            <!-- Checkbox -->
+            <!-- <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Pagos</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Transferencia
+                </label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Pay Pal
+                </label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Bitcoins
+                </label>
+              </div>
+            </div> -->
+            <!-- Combo box -->
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Pagos</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="radio"  id="flexCheckDefault" name="pago" required>
+                <label class="form-check-label" for="flexCheckDefault">
+                  Transferencia
+                </label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="radio"  id="flexCheckChecked" name="pago" required>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Pay Pal
+                </label>
+                <div class="invalid-feedback">
+                  Falta método de pago
+                </div>
+              </div>
+             
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="radio"  id="flexCheckChecked"  name="pago" disabled>
+                <label class="form-check-label" for="flexCheckChecked" >
+                  Bitcoins
+                </label>
+              </div>
+            </div>
+            
+         
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+        <div class="col-12 col-md-6">
+          <img src="./images/bg2.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="container-fluid mt-4 p-4 text-white bg-dark text-center">
         <p>Copyright 2021 - Jesús Villarreal</p>
@@ -232,6 +322,27 @@
           false
         );
       }
+
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+          .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+      })()
     </script>
   </body>
 </html>
